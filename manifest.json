@@ -3,6 +3,7 @@
   "short_name": "bptracker",
   "start_url": "/",
   "display": "standalone",
+  "theme_color": "#333333",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
