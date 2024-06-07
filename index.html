@@ -1,19 +1,32 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <title>bptracker</title>
+    <script type="module" crossorigin src="/assets/index-Dj154X-p.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dqow748c.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="manifest" href="manifest.json">
-  <title>bptracker</title>
-  <script type="module" crossorigin src="/assets/index-Crmn8Md6.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Dqow748c.css">
-</head>
+  <body>
+    <script src="https://accounts.google.com/gsi/client"></script>
+    <div id="app"></div>
+    <script>
+      /* auto update script*/
+      let cacheInvalidateSeconds = 60 * 60 * 24 * 3
+      let lastRefresh = localStorage.getItem("cache-token")
+      let nowTime = new Date().valueOf() / 1000
 
-<body>
-  <script src="https://accounts.google.com/gsi/client"></script>
-  <div id="app"></div>
-</body>
+      if (!lastRefresh) {
+        localStorage.setItem("cache-token", 0)
+      }
 
+      if ((nowTime - lastRefresh) > cacheInvalidateSeconds) {
+        localStorage.setItem("cache-token", nowTime);
+        alert("Updating....")
+      }
+    </script>
+  </body>
 </html>
