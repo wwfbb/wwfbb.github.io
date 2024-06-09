@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="manifest.json" />
     <title>bptracker</title>
-    <script type="module" crossorigin src="/assets/index-Dj154X-p.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dqow748c.css">
+    <script type="module" crossorigin src="/assets/index-D7LXRfc5.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BkXtZlQU.css">
   </head>
 
   <body>
@@ -15,17 +15,17 @@
     <div id="app"></div>
     <script>
       /* auto update script*/
-      let cacheInvalidateSeconds = 60 * 60 * 24 * 3
-      let lastRefresh = localStorage.getItem("cache-token")
-      let nowTime = new Date().valueOf() / 1000
+      let cacheInvalidateSeconds = 60 * 60 * 24 * 3;
+      let lastRefresh = Number(localStorage.getItem("cache-token"));
+      let nowTime = new Date().valueOf() / 1000;
 
       if (!lastRefresh) {
-        localStorage.setItem("cache-token", 0)
+        localStorage.setItem("cache-token", 0);
       }
 
-      if ((nowTime - lastRefresh) > cacheInvalidateSeconds) {
+      if (nowTime - lastRefresh > cacheInvalidateSeconds) {
         localStorage.setItem("cache-token", nowTime);
-        alert("Updating....")
+        alert("Updating....");
       }
     </script>
   </body>
